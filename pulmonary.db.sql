@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.34-MariaDB)
-# Date: 2023-11-25 14:33:29
+# Date: 2023-11-25 15:51:18
 # Generator: MySQL-Front 6.1  (Build 1.26)
 
 
@@ -24,6 +24,7 @@ CREATE TABLE `appointment` (
 # Data for table "appointment"
 #
 
+INSERT INTO `appointment` VALUES (1,5,'2023-11-26','Pending','2023-11-25','12:00PM','follow up',2),(2,5,'2023-11-26','Pending','2023-11-25','12:30PM','check up',2),(3,5,'2023-11-26','Approved','2023-11-25','12:00PM','chfhfh',2);
 
 #
 # Structure for table "check_up"
@@ -45,6 +46,7 @@ CREATE TABLE `check_up` (
 # Data for table "check_up"
 #
 
+INSERT INTO `check_up` VALUES (1,3,NULL,'whjkegfskefhsogishgsoigh','y4uitriurteutrgtow','Yes','urgiugriugedigeeidgt');
 
 #
 # Structure for table "lab_test"
@@ -63,6 +65,7 @@ CREATE TABLE `lab_test` (
 # Data for table "lab_test"
 #
 
+INSERT INTO `lab_test` VALUES (1,3,'urgiugriugedigeeidgt ejfhejehggh','2023-11-25');
 
 #
 # Structure for table "physical_test"
@@ -84,6 +87,7 @@ CREATE TABLE `physical_test` (
 # Data for table "physical_test"
 #
 
+INSERT INTO `physical_test` VALUES (1,3,'37','80/110','100','100','100');
 
 #
 # Structure for table "user"
@@ -104,11 +108,12 @@ CREATE TABLE `user` (
   `isDeleted` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'false',
   `birthday` date DEFAULT NULL,
   `doctorId` int(11) DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'admin','1234','John','Doe','Active','Admin',NULL,NULL,NULL,'false',NULL,NULL),(2,'Mary','198738','Dr. Mary Angelson ','Delios- Balles','Inactive','Doctor','2023-11-25','09486600146','maryangelson@gmail.com','false',NULL,0);
+INSERT INTO `user` VALUES (1,'admin','1234','John','Doe','Active','Admin',NULL,NULL,NULL,'false',NULL,NULL,NULL),(2,'Mary','1234','Dr. Mary Angelson ','Delios- Balles','Active','Doctor','2023-11-25','09486600146','maryangelson@gmail.com','false',NULL,0,'1700898550.jpg'),(3,'staff','1234','Monica','Enrique','Active','Staff','2023-11-25','09703344152','monica@gmail.com','false',NULL,2,NULL),(4,'lab','1234','Angelson','Clini','Active','Lab','2023-11-25','09914720342','clinicangelson@gmail.com','false',NULL,0,NULL),(5,'Anton','1234','Antonio','Garnica','Active','Patient','2023-11-25','09914720342','antoniogarnica0919@gmail.com','false','2023-06-02',NULL,NULL);

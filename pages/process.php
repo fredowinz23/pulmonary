@@ -35,7 +35,22 @@ switch ($action) {
 		change_app_status();
 		break;
 
+	case 'upload-picture' :
+		upload_picture();
+		break;
+
 	default :
+}
+
+function upload_picture(){
+
+	$doctorId = $_SESSION["user_session"]["Id"];
+
+	$model = user();
+	$model->obj["image"] = uploadFile($_FILES["image"]);
+	$model->update("Id=$doctorId");
+
+	header('Location: my-profile.php');
 }
 
 

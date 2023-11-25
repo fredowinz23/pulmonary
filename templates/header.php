@@ -56,7 +56,7 @@ else{
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
                 <?php if (isset($_SESSION["user_session"]["username"])): ?>
-                  <li class="list-inline-item"><a href="#"><?=$_SESSION["user_session"]["firstName"]?> <?=$_SESSION["user_session"]["lastName"]?> (<?=$_SESSION["user_session"]["role"]?>)</li>
+                  <li class="list-inline-item"><a href="my-profile.php"><?=$_SESSION["user_session"]["firstName"]?> <?=$_SESSION["user_session"]["lastName"]?> (<?=$_SESSION["user_session"]["role"]?>)</li>
                   <li class="list-inline-item"> &nbsp;&nbsp; <a href="../auth/process.php?action=user-logout"><b>LOGOUT</b></a></li>
                   <?php else: ?>
                   <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
@@ -115,9 +115,9 @@ else{
                 <li class="nav-item"><a href="appointments.php" class="nav-link">Appointment</a></li>
               <li class="nav-item"><a href="patient-list.php?view=physical-test" class="nav-link">Patient Physical Test</a></li>
                 <li class="nav-item"><a href="patient-list.php?view=check-up" class="nav-link">Patient Check Up Records</a></li>
-                  <li class="nav-item"><a href="patient-test-list.php" class="nav-link">Lab Test</a></li>
+                  <li class="nav-item"><a href="lab-test-list.php" class="nav-link">Lab Test</a></li>
               <?php endif; ?>
-              <?php if ($userSession["role"]=="Clinic Staff"): ?>
+              <?php if ($userSession["role"]=="Staff"): ?>
                 <li class="nav-item"><a href="appointments.php" class="nav-link">Appointment</a></li>
                 <li class="nav-item"><a href="patient-list.php?view=physical-test" class="nav-link">Patient Physical Test</a></li>
               <?php endif; ?>

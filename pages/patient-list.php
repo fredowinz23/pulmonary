@@ -46,7 +46,7 @@ $role = $userSession["role"];
         <?php if ($ptCheck>0): ?>
           <td><a href="physical-test-detail.php?Id=<?=$row->Id;?>" class="btn btn-warning btn-sm">View Pysical Test</a></td>
           <?php else: ?>
-            <?php if ($role=="Clinic Staff"): ?>
+            <?php if ($role=="Staff"): ?>
               <td><a href="physical-test-form.php?Id=<?=$row->Id;?>" class="btn btn-primary btn-sm">Pysical Test Form</a></td>
               <?php else: ?>
               <td><a href="" class="btn btn-secondary btn-sm">Not Yet</a></td>
